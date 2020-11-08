@@ -3,15 +3,75 @@
   padding: 0;
   box-sizing: border-box;
 }
-h1 {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 36px;
-  color: #060a24;
-  letter-spacing: 0;
-  line-height: 42px;
-  margin-bottom: 20px;
+/* LOGO & NAVBAR */
+
+nav {
+  margin: 16px;
+  justify-content: space-between;
 }
 
+.logo {
+  /*float: left;*/
+}
+
+ul {
+  display: none;
+}
+
+#menu:checked ~ ul {
+  /*  float: right;*/
+  display: block;
+}
+
+#menu {
+  display: none;
+}
+
+label {
+  float: right;
+  box-sizing: border-box;
+  display: inline-block;
+
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
+
+/* Estilo del boton cuando se pasa el mouse por encima*/
+label:hover {
+  font-weight: bolder;
+}
+
+/* Estilo del boton cuando el menú está expandido*/
+input:checked ~ label {
+  /*display: none;*/
+}
+
+ul {
+  margin-top: 0;
+  padding: 0;
+  width: 90%;
+}
+
+li {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  /*border-bottom: 1px solid grey;*/
+  text-align: right;
+}
+
+/*Estilo cuando el mouse pasa encima de cada link del menu*/
+li:hover {
+  filter: brightness(110%);
+}
+
+/* SHOWCASE */
 .showcase {
   margin: 16px;
 
@@ -19,6 +79,15 @@ h1 {
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
+}
+
+h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  color: #060a24;
+  letter-spacing: 0;
+  line-height: 42px;
+  margin-bottom: 20px;
 }
 
 .tachado {
