@@ -62,8 +62,9 @@ li {
   margin: 0;
   padding: 10px;
   list-style: none;
-  /*border-bottom: 1px solid grey;*/
-  text-align: right;
+  color: #ffffff;
+  background: #0000ec;
+  text-align: left;
 }
 
 /*Estilo cuando el mouse pasa encima de cada link del menu*/
@@ -114,4 +115,29 @@ h2 {
   min-height: 0.9%;
   align-items: center;
   justify-content: center;
+}
+
+.btn_conoce:hover {
+  background: linear-gradient(to left, #00f0b8, #0000fe);
+}
+
+/* PRINCIPAL */
+.torcido-blue {
+  /*display: flex;*/
+  /*align-items: center;*/
+  color: white;
+  background: linear-gradient(to bottom, #0000ff, #0000a3);
+
+  clip-path: polygon(0 30px, 100% 0%, 100% 95%, 0% 100%);
+}
+
+h3 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 36px;
+  margin: 20px;
+  padding-top: 50px;
+}
+
+.images {
+  margin: 16px;
 }
