@@ -1,0 +1,48 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  color: #060a24;
+  letter-spacing: 0;
+  line-height: 42px;
+  margin-bottom: 20px;
+}
+
+.showcase {
+  margin: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.tachado {
+  text-decoration: line-through;
+}
+
+h2 {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  color: #060a24;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.btn_conoce {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+  display: flex;
+  background: #00f3bb;
+  width: 288px;
+  height: 48px;
+  min-width: 90%;
+  min-height: 0.9%;
+  align-items: center;
+  justify-content: center;
+}
