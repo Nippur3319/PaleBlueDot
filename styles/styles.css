@@ -138,15 +138,15 @@ h1 {
   background: linear-gradient(to bottom, #0000ff, #0000a3);
 
   clip-path: polygon(0 30px, 100% 0%, 100% 97%, 0% 100%);
-
-  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 130px;
 }
 
 h3 {
   font-family: "IBM Plex Mono", monospace;
   font-size: 36px;
-  margin: 20px;
-  padding-top: 50px;
+  margin: 16px;
+  
   align-self: flex-start;
 }
 
@@ -164,10 +164,14 @@ h3 {
 .historia {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #img_phone {
   width: 95%;
+  transform: translatey(-100px)
 }
 .encabezado_historia {
   margin: 5%;
@@ -183,13 +187,10 @@ h3 {
   
 }
 
-.img_container {
-  margin: 0;
-  padding: 0;
-  max-height: 243px;
-}
+
 .img_gallery {
-  width: 100%;
+  max-width: 320px;
+  max-height: 243px;
   margin: 0;
 }
 
@@ -221,9 +222,14 @@ h4 {
   color: #060a24;
   letter-spacing: 0;
   line-height: 22px;
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
+  /*margin-bottom: 20px;*/
   font-weight: bolder;
 }
+
+
+
+
 
 .footer_dev {
   padding-top: 20px;
