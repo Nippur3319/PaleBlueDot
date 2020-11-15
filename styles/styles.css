@@ -2,18 +2,27 @@
   margin: 0px;
   padding: 0;
   box-sizing: border-box;
+  
 }
+
+.global_container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 /* NAVBAR */
 
 .navbar {
+  max-width: 1440px;
+  margin: 0 auto;
   position: fixed;
   height: 56px;
-  width: 100%;
+  min-width: 296px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   top: 0;
-  left: 0;
+  
   background-color: white;
   z-index: 100;
 }
@@ -21,6 +30,36 @@
 .logo {
   margin: 10px 0 10px 16px;
 }
+
+
+.desktop-navigation ul {
+  display:none;
+  
+  list-style: none;
+
+}
+
+.desktop-navigation ul li {
+  margin: 0 20px;
+}
+.desktop-navigation ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.desktop-navigation ul li a:hover {
+  text-decoration: line-through;
+  color: var(--secondary-color);
+}
+
+.desktop-navigation ul li a:active {
+  text-decoration: line-through;
+  color: #000000;
+}
+
+
+
 
 .nav-icon {
   margin: 1em;
@@ -83,28 +122,6 @@
   margin: 14px 0 14px 16px;
 }
 
-.desktop-navigation ul {
-  display: flex;
-}
-
-.desktop-navigation ul li {
-  margin: 0 20px;
-}
-.desktop-navigation ul li a {
-  text-decoration: none;
-  color: black;
-  font-family: "IBM Plex Mono", monospace;
-}
-
-.desktop-navigation ul li a:hover {
-  text-decoration: line-through;
-  color: var(--secondary-color);
-}
-
-.desktop-navigation ul li a:active {
-  text-decoration: line-through;
-  color: #000000;
-}
 
 /*Estilo cuando el mouse pasa encima de cada link del menu*/
 li:hover {
@@ -152,7 +169,7 @@ h1 {
   background: #00f3bb;
   width: 288px;
   height: 48px;
-  min-width: 90%;
+  width: 90%;
   min-height: 0.9%;
   align-items: center;
   justify-content: center;
@@ -207,7 +224,7 @@ h3 {
   align-items: flex-start;
 }
 
-#img_phone {
+.img_phone {
   max-width: 95%;
   transform: translatey(-100px);
   display: flex;
@@ -227,12 +244,12 @@ h3 {
 .grilla_img {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1-;
+  
 }
 
-.img_gallery {
-  max-width: 320px;
-  max-height: 243px;
+.img_guests {
+  width: 320px;
+  height: 243px;
   margin: 0;
 }
 
@@ -269,12 +286,20 @@ h4 {
   font-weight: bolder;
 }
 
-.footer_dev {
-  padding-top: 20px;
-  padding-bottom: 10px;
+.footer {
+  padding: 20px 10% 10px 10%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+.footer_icons {
+  display: flex;
+  flex-direction: row;
+  min-width: 30%;
+  justify-content: space-between;
+  
 }
 
 /* MEDIA QUERIES */
@@ -282,10 +307,25 @@ h4 {
 @media (min-width: 768px) {
   /* MEDIA QUERIES: para desktop, pasada en limpio */
 
+  .navbar {
+    width: 100%;
+  }
+  
   .nav-icon {
     display: none;
   }
 
+  .desktop-navigation ul {
+    display: flex;
+  }
+  .btn_conoce {
+    max-width: 400px;
+    
+  }
+
+  .showcase {
+    align-items: flex-start;
+  }
   .flex-row {
     display: flex;
     flex-direction: row;
@@ -299,73 +339,58 @@ h4 {
     width: 585px;
   }
 
+  .img_phone {
+    max-height: 660px;
+  }
+
   .grilla_img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row
+    grid-template-rows: 1fr 1fr;
+    width: 1440px;
+    height: 728px;
   }
 
-  .img_gallery {
-    min-width: 480px;
-    min-height: 364px;
+  .img_guests {
+    width: 480px;
+    height:364px;
     margin: 0;
   }
+
+  .torcido-blue {
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+  
+  .footer {
+    flex-direction: row;
+  }
+
+
 
   /* MEDIA QUERIES sucias */
 
-  p {
-    text-align: left;
-  }
 
-  #Landing {
-    margin-bottom: 150px;
-    align-items: left;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .iconos {
-    flex-direction: row;
-    justify-content: center;
-    margin: 200px 0;
-  }
 
-  .images-invitados img {
+  /* .images-invitados img {
     width: 480px;
     height: 364px;
     margin: 0;
-  }
-  .images-invitados {
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .bg-skew {
-    height: 120%;
-  }
-  .news {
-    left: 15%;
-  }
+  } */
+
+
   .encabezado_historia {
     padding: 20px;
     width: 500px;
     margin: 120px;
   }
-  .footer {
-    display: flex;
 
-    justify-content: center;
-  }
-  .icono-redes {
-    margin: 20px;
-  }
-}
+
 
 /*funciona ok*/
-@media (max-width: 999px) {
+@media (max-width: 768px) {
   .desktop-navigation {
-    display: none;
+    /*display: none;*/
+    /*list-style: none;*/
   }
 }
