@@ -17,7 +17,7 @@
   margin: 0 auto;
   position: fixed;
   height: 56px;
-  min-width: 296px;
+  min-width: 320px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -241,15 +241,15 @@ h3 {
   margin: 0;
 }
 
-.grilla_img {
+.img_grid {
   display: grid;
   grid-template-columns: 1fr;
   
 }
 
 .img_guests {
-  width: 320px;
-  height: 243px;
+  min-width: ;width: 320px;
+  min-height: 243px;
   margin: 0;
 }
 
@@ -343,7 +343,7 @@ h4 {
     max-height: 660px;
   }
 
-  .grilla_img {
+  .img_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
