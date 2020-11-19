@@ -155,6 +155,7 @@ h1 {
 
 .btn_conoce {
   font-family: "IBM Plex Mono", monospace;
+  
   font-weight: bold;
   color: #060a24;
   display: flex;
@@ -169,6 +170,10 @@ h1 {
 
 .btn_conoce:hover {
   background: linear-gradient(to left, #00f0b8, #0000fe);
+}
+
+.btn_conoce a {
+  text-decoration: none;
 }
 
 /* PRINCIPAL */
